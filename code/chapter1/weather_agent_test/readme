@@ -1,0 +1,14 @@
+  code/chapter1/weather_agent_test/
+  ├── __init__.py      # 包入口，导出主要模块
+  ├── config.py        # 配置模块：系统提示词和API配置
+  ├── tools.py         # 工具模块：天气查询和景点推荐函数
+  ├── clients.py       # 客户端模块：LLM API封装
+  ├── core.py          # 核心模块：Agent运行器类
+  └── main.py          # 主入口：启动脚本
+
+  拆分逻辑：
+  - config.py - 系统提示词、API配置、最大迭代次数
+  - tools.py - get_weather()、get_attraction() 和工具字典
+  - clients.py - OpenAICompatibleClient LLM客户端封装
+  - core.py - AgentRunner 类，包含主循环逻辑
+  - main.py - 入口脚本，初始化并运行Agent
